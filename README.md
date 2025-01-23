@@ -1,6 +1,8 @@
 # Jokes API!
 
-Para resolver el ejercicio necesitamos:
+Recuerda clonar (fork) el repositorio para practicar!
+
+## Para resolver el ejercicio necesitamos:
 1. Obtener el chiste desde la URL:
 ``` javascript
 const BASE_URL = "https://v2.jokeapi.dev/joke/Any?lang=es"
