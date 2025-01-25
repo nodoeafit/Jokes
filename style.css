@@ -1,4 +1,7 @@
 body {
+  background-image: url(/imgs/89114.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -11,10 +14,13 @@ header {
   color: #fff;
 }
 
+h1{
+  color: #f5de0d;
+}
 .button-warning {
   margin: 10px;
   padding: 10px;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(31, 30, 30);
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -24,8 +30,8 @@ header {
 .button-info {
   margin: 10px;
   padding: 10px;
-  background-color: rgb(60, 60, 255);
-  color: #fff;
+  background-color: rgb(246, 255, 0);
+  color: #000000;
   border: none;
   border-radius: 5px;
   font-weight: 500;
@@ -45,9 +51,9 @@ header {
   visibility: hidden;
 }
 
+
 .joke, .buttons {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
@@ -57,6 +63,7 @@ header {
   margin: 10%;
 }
 
-.show, .delivery{
+.button-details, .delivery{
   display: none;
 }
+

@@ -17,7 +17,7 @@ const BASE_URL = "https://v2.jokeapi.dev/joke/Any?lang=es"; // URL BASE PARA EL 
 const singleElement = document.querySelector(".single");
 const setupElement = document.querySelector(".setup");
 const deliveryElement = document.querySelector(".delivery");
-const showButton = document.querySelector(".show");
+const showButton = document.querySelector(".button-details");
 const btnJakeButton = document.querySelector(".button-info");
 
 const obtenerChiste = async () => {
