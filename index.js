@@ -13,3 +13,39 @@ Adjunto dos imágenes básicas de como se ve el ejercicio final.
 
 */
 const BASE_URL = "https://v2.jokeapi.dev/joke/Any?lang=es"; // URL BASE PARA EL EJERCICIO :)
+
+const singleElement = document.querySelector(".single");
+const setupElement = document.querySelector(".setup");
+const deliveryElement = document.querySelector(".delivery");
+const showButton = document.querySelector(".show");
+const btnJakeButton = document.querySelector(".button-info");
+
+const obtenerChiste = async () => {
+    const response = (await fetch (BASE_URL));
+    const data = response.json();
+    return data;
+}
+
+const mostrarChiste = async () => {
+    const chiste = await obtenerChiste ();
+    if (chiste.type == "single") {
+        singleElement.innerHTML = chiste.joke;
+        //singleElement.style.display = "block";
+    } else {
+        setupElement.innerHTML = chiste.setup;
+        //setupElement.style.display = "block";
+        showButton.style.display = "block";
+
+        deliveryElement.innerHTML = chiste.delivery;
+    }    
+}
+
+showButton.addEventListener ("click", () => {
+ deliveryElement.style.display = "block";
+ showButton.style.display = "none";
+});
+
+btnJakeButton.addEventListener ("click", () => {
+    mostrarChiste();
+    btnJakeButton.disabled = "true";
+});

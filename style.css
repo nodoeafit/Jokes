@@ -56,3 +56,7 @@ header {
   font-size: x-large;
   margin: 10%;
 }
+
+.show, .delivery{
+  display: none;
+}
