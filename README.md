@@ -5,7 +5,7 @@ Recuerda clonar (fork) el repositorio para practicar!
 ## Para resolver el ejercicio necesitamos:
 1. Obtener el chiste desde la URL:
 ``` javascript
-const BASE_URL = "https://v2.jokeapi.dev/joke/Any?lang=es"
+const BASE_URL = "https://v2.jokeapi.dev/joke/"
 ```
 2. Renderizar el chiste en el HTML dependiendo de si es un "Two Part" o "Single"
     
