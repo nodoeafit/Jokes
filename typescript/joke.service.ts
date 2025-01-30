@@ -1,7 +1,13 @@
-import { category, Joke, type } from './joke.interface';
+import { category, Joke, type } from './joke.interface.js';
 
 export class JokeService {
     BASE_URL = "https://v2.jokeapi.dev/joke/"; // URL BASE PARA EL EJERCICIO :)
+    // TIPO_CHISTE = type.single;
+
+    //constructor
+    // constructor(tipo: type) {
+    //     this.TIPO_CHISTE = tipo;
+    // }
 
     async getJokeByLangAndCat(lang: string, cat?: string): Promise<Joke> { //: Promise<Joke>
         //https://v2.jokeapi.dev/joke/Programming?lang=es
@@ -17,9 +23,9 @@ export class JokeService {
             error: data.error,
             category: categoryEnum,
             type: typeJoke,
-            setup: data.setup,
-            delivery: data.delivery,
-            joke: data.joke,
+            setup: (typeJoke == type.twopart) ? data.setup : '',
+            delivery: (typeJoke == type.twopart) ? data.delivery : '',
+            joke: (typeJoke == type.single) ? data.joke : '',
             flags: {
                 nsfw: data.flags.nsfw,
                 religious: data.flags.religious,
